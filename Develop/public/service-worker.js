@@ -2,11 +2,11 @@ console.log('service-worker.js file is running!');
 
 const FILES_TO_CACHE = [
     `/index.html`,
-    `/css/index.css`,
+    `/css/style.css`,
     `/js/index.js`,
     `/js/db.js`,
     `/manifest.webmanifest`,
-    `/img/icons/icon-152x152.png`
+    `/icons/icon-128x128.png`
 ];
 const STATIC_CACHE = `static-cache-v1`;
 const RUNTIME_CACHE = `runtime-cache`;
