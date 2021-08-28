@@ -60,4 +60,19 @@ self.addEventListener(`fetch`, event => {
         );
         return;
     }
+    event.respondWith(
+        caches.match(event.request).then(cachedResponse => {
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+
+            return caches
+                .open(RUNTIME_CACHE)
+                .then(cache =>
+                    fetch(event.request).then(response =>
+                        cache.put(event.request, response.clone()).then(() => response)
+                    )
+                );
+        })
+    );
 });
