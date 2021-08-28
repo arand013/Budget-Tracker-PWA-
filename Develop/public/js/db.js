@@ -63,3 +63,19 @@ function checkDatabase() {
         }
     };
 }
+
+function saveRecord(record) {
+    const db = request.result;
+
+    // create a transaction on the pending db with readwrite access
+    const transaction = db.transaction([pendingObjectStoreName], `readwrite`);
+
+    // access your pending object store
+    const store = transaction.objectStore(pendingObjectStoreName);
+
+    // add record to your store with add method.
+    store.add(record);
+}
+
+// listen for app coming back online
+window.addEventListener(`online`, checkDatabase);
