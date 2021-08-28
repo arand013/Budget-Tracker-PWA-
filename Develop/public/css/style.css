@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Arial;
+    background-color: #f7fafc;
+}
+
+button, input {
+    font-size: 1em;
+    font-family: Arial;
+}
+
+label {
+    font-weight: 900;
+}
+
+input {
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 0.4em 0.8em;
+    background-color: #e2e8f0;
+}
+
+input:focus {
+    background-color: #ffffff;
+    border: 2px solid #cbd5e0;
+    outline: 0;
+}
