@@ -61,3 +61,26 @@ table {
     max-width: 800px;
     text-align: center;
 }
+.total {
+    font-size: 150%;
+}
+
+form {
+    margin-top: 25px;
+}
+
+.transactions {
+    text-align: left;
+    max-height: 300px;
+    overflow: auto;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.transaction-buttons {
+    margin-top: 25px;
+}
+
+#auth-image {
+    border-radius: 50%;
+}
